@@ -3,6 +3,8 @@ package example.codeclan.com.puggy;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static android.media.CamcorderProfile.get;
+
 /**
  * Created by user on 30/06/2017.
  */
@@ -14,7 +16,7 @@ public class Wheel {
 
 
     public Wheel() {
-        this.barrel = new ArrayList<Symbol>();
+        barrel = new ArrayList<Symbol>();
         populate();
     }
 
@@ -39,4 +41,11 @@ public class Wheel {
     public void spin(){
         Collections.shuffle(barrel);
     }
+
+    public Symbol getSpinResult(){
+        return barrel.get(0);
+    }
+
+
+
 }
