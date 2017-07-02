@@ -10,28 +10,27 @@ import java.util.ArrayList;
 public class FruitMachine {
 
     Player player;
-    Wheel barrel1;
-    Wheel barrel2;
-    Wheel barrel3;
-    ArrayList<Symbol>spinResults;
-    ArrayList<Symbol>barrel;
-    int randomlySelectedIndex;
+    Wheel wheel1;
+    Wheel wheel2;
+    Wheel wheel3;
+    ArrayList<Symbol> wheel;
+
 
 
     public FruitMachine() throws Exception {
         this.player = new Player(5);
-        this.barrel1 = new Wheel();
-        this.barrel2 = new Wheel();
-        this.barrel3 = new Wheel();
+        this.wheel1 = new Wheel();
+        this.wheel2 = new Wheel();
+        this.wheel3 = new Wheel();
         spinWheels();
 
 
     }
 
     public void spinWheels(){
-        this.barrel1.spin();
-        this.barrel2.spin();
-        this.barrel3.spin();
+        this.wheel1.spinWheel1();
+        this.wheel2.spinWheel2();
+        this.wheel3.spinWheel3();
     }
 
 //    public ArrayList<Symbol> allSpinResults() throws Exception{
@@ -40,13 +39,13 @@ public class FruitMachine {
 //        spinResults.add(barrel3.getSpinResult());
 //        return allSpinResults();
 //    }
-
-    public ArrayList<Symbol> allSpinResults() throws Exception{
-        allSpinResults().add(barrel1.getSpinResult());
-        allSpinResults().add(barrel2.getSpinResult());
-        allSpinResults().add(barrel3.getSpinResult());
-        return allSpinResults();
-    }
+//
+//    public ArrayList<Symbol> allSpinResults() throws Exception{
+//        allSpinResults().add(barrel1.getSpinResult());
+//        allSpinResults().add(barrel2.getSpinResult());
+//        allSpinResults().add(barrel3.getSpinResult());
+//        return allSpinResults();
+//    }
 
 
 }
